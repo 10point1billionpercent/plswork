@@ -46,8 +46,7 @@
       <div class="modal-content">
         <label onclick="closeModal('errorModal')" style="align-self: flex-end; margin-bottom: 20px;">✕</label>
         <img class="modal-image" src="{{ url_for('static', filename='images/upload_fail.png') }}">
-        <p id="errorMessage">Something went wrong.</p>
-        <p id="errorMessage">Please try again.</p>
+        <p id="errorMessage">Something went wrong. <br> Please try again.</p>
       </div>
     </div>
         </div>
@@ -79,13 +78,13 @@ document.getElementById('fileUpload').addEventListener('change', function () {
       openModal('successModal');
     } else {
       return response.text().then(msg => {
-        document.getElementById('errorMessage').textContent = msg;
+        document.getElementById('errorMessage');
         openModal('errorModal');
       });
     }
   })
   .catch(error => {
-    document.getElementById('errorMessage').textContent = "Upload failed: " + error;
+    document.getElementById('errorMessage');
     openModal('errorModal');
   });
 });
