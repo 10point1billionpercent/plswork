@@ -25,7 +25,7 @@
                 <li><a href="{{ url_for('about') }}">About</a></li>
             </ul>
           </nav>
-        
+
      <h1> Start Ocean Scan </h1>
      <a class="microcopy">AI powered ocean image scanning <br> for oil spill detection.</a>
      <div class="btn-container">
@@ -46,13 +46,14 @@
       <div class="modal-content">
         <label onclick="closeModal('errorModal')" style="align-self: flex-end; margin-bottom: 20px;">✕</label>
         <img class="modal-image" src="{{ url_for('static', filename='images/upload_fail.png') }}">
-        <p id="errorMessage">Something went wrong. <br> Please try again.</p>
+        <p id="errorMessage">Something went wrong.</p>
+        <p id="errorMessage">Please try again.</p>
       </div>
     </div>
         </div>
         </div>
-        
-    
+
+
         <script>
           function openModal(id) {
   document.getElementById(id).style.display = "block";
@@ -78,13 +79,13 @@ document.getElementById('fileUpload').addEventListener('change', function () {
       openModal('successModal');
     } else {
       return response.text().then(msg => {
-        document.getElementById('errorMessage');
+        document.getElementById('errorMessage').textContent = msg;
         openModal('errorModal');
       });
     }
   })
   .catch(error => {
-    document.getElementById('errorMessage');
+    document.getElementById('errorMessage').textContent = "Upload failed " + error;
     openModal('errorModal');
   });
 });
