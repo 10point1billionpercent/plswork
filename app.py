@@ -40,5 +40,6 @@ def upload_file():
             return jsonify(status='error', message=f'Failed to save file: {e}'), 500
     else:
         return jsonify(status='error', message='Invalid file type'), 400
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080)  # This binds it to Render's environment
