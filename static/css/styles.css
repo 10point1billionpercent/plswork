@@ -98,7 +98,7 @@ html, body {
 
             .microcopy{
                 font-size: 18px;
-                font-family: 'Merriweather','sans-serif';
+                font-family: 'Inter';
                 color: white;
                 text-shadow: 0 0 5px rgba(161,208,255,0.7);
             }
@@ -131,6 +131,7 @@ html, body {
                 color: white; 
                 z-index: 1;
                 font-weight: bold;
+                font-family: 'Inter';
               }
               .microcopy-container{
                 display: flex;
@@ -185,6 +186,7 @@ html, body {
                 gap: 20px;
                 border-radius: 10px;
                 justify-content: center;
+                font-family: 'Inter';
               }
 
               img{
@@ -195,8 +197,8 @@ html, body {
               .desc{
                 color: white;
                 text-decoration: none;
-                font-size: 14px;
-                font-family: 'Merriweather','sans-serif';
+                font-size: 15px;
+                font-family: 'Inter';
                 margin: 0;
                 padding:0;
                 text-align: left;
@@ -205,7 +207,7 @@ html, body {
                 color: white;
                 text-decoration: none;
                 font-size: 18px;
-                font-family: 'Merriweather','sans-serif';
+                font-family: 'Inter';
                 margin: 0;
                 padding:0;
                 text-align: left;
@@ -251,7 +253,7 @@ html, body {
                 border-radius: 8px;
                 font-size: 16px;
                 cursor: pointer;
-                font-family: 'Merriweather';
+                font-family: 'Inter';
                 transition: background-color 0.3s ease;
                 box-shadow: 0px 4px 5px rgba(255, 255, 255, 0.5);
                 backdrop-filter: blur(10px);
@@ -329,3 +331,32 @@ html, body {
               width:70px;
               height:70px;
             }
+            .about-website{
+              margin-top: 20px;
+              margin-left:150px;
+              display: flex;
+              flex-direction: column;
+              width:700px;
+              height:800px;
+              gap:16px;
+            }
+            .subheading{
+              font-family: 'Merriweather';
+              color: white;
+              text-align: left;
+              font-size: 18px;
+              text-shadow: 0 0 20px rgba(8,90,180,1);
+              margin:0;
+            }
+            .sentences{
+              font-size: 16px;
+              font-family: 'Inter';
+              color: white;
+              text-align: left;
+            }
+            .paragraph{
+              display: flex;
+              flex-direction: column;
+              gap:2px;
+            }
+            
